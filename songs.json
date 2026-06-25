@@ -1,0 +1,39 @@
+[
+  {
+    "title": "Canzone per un'amica",
+    "midiPath": "Assets/karaoke/Canzone-per-un-amica.mid",
+    "karPath": "Assets/karaoke/Canzone-per-un-amica.mid",
+    "lyricsPath": "Assets/karaoke/Canzone-per-un-amica.txt",
+    "videoPath": "Songs/song.mp4"
+  },
+  {
+    "title": "Delfini",
+    "midiPath": "Assets/karaoke/Delfini (1).mid",
+    "karPath": "Assets/karaoke/Delfini (1).mid",
+    "videoPath": "Songs/song.mp4"
+  },
+  {
+    "title": "Il mio sbaglio piu grande",
+    "midiPath": "Assets/karaoke/Il-mio-sbaglio-piu-grande.mid",
+    "karPath": "Assets/karaoke/Il-mio-sbaglio-piu-grande.mid",
+    "videoPath": "Songs/song.mp4"
+  },
+  {
+    "title": "Il vecchio ed il bambino",
+    "midiPath": "Assets/karaoke/Il-vecchio-ed-il-bambino.mid",
+    "karPath": "Assets/karaoke/Il-vecchio-ed-il-bambino.mid",
+    "videoPath": "Songs/song.mp4"
+  },
+  {
+    "title": "L'elefante e la farfalla",
+    "midiPath": "Assets/karaoke/L-elefante-e-la-farfalla.MID",
+    "karPath": "Assets/karaoke/L-elefante-e-la-farfalla.MID",
+    "videoPath": "Songs/song.mp4"
+  },
+  {
+    "title": "Per Elisa",
+    "midiPath": "Assets/karaoke/Per-Elisa.mid",
+    "karPath": "Assets/karaoke/Per-Elisa.mid",
+    "videoPath": "Songs/song.mp4"
+  }
+]

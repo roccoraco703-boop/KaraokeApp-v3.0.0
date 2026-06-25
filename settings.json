@@ -1,0 +1,7 @@
+{
+  "MicVolume": 1.0,
+  "MusicVolume": 0.8,
+  "OffsetMs": 120,
+  "AutoTuneMode": "Soft",
+  "StartMixerEnabled": false
+}
