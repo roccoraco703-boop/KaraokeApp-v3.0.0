@@ -1084,6 +1084,7 @@ namespace KaraokeApp.ViewModels
 
             // Se è configurato LibraryPath, scansiona ricorsivamente quella cartella
             string? libraryPath = _configService?.Settings?.LibraryPath;
+            AppServices.Log.Info($"LoadSongs: LibraryPath from config = '{libraryPath}'");
             if (!string.IsNullOrWhiteSpace(libraryPath) && Directory.Exists(libraryPath))
             {
                 AppServices.Log.Info($"LoadSongs: scanning LibraryPath={libraryPath} (recursive)");
@@ -1180,6 +1181,7 @@ namespace KaraokeApp.ViewModels
                         if (_configService != null)
                         {
                             _configService.Settings.LibraryPath = dlg.SelectedPath;
+                            AppServices.Log.Info($"SelectLibraryFolder: About to save LibraryPath={_configService.Settings.LibraryPath}");
                             _configService.Save();
                             AppServices.Log.Info($"SelectLibraryFolder: LibraryPath saved to config");
                         }
