@@ -1124,10 +1124,12 @@ namespace KaraokeApp.ViewModels
                 if (Path.GetExtension(file).Equals(".kar", StringComparison.OrdinalIgnoreCase))
                     karPath = file;
 
+                string midiPath = Path.GetExtension(file).Equals(".kar", StringComparison.OrdinalIgnoreCase) ? karPath : file;
+
                 songs.Add(new SongViewModel
                 {
                     Title = title,
-                    MidiPath = Path.GetRelativePath(basePath, file),
+                    MidiPath = Path.GetRelativePath(basePath, midiPath),
                     KarPath = Path.GetRelativePath(basePath, karPath),
                     VideoPath = Path.Combine("Songs", "song.mp4"),
                     MidiExists = File.Exists(file),
