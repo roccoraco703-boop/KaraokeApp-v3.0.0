@@ -1088,11 +1088,16 @@ namespace KaraokeApp.ViewModels
             if (!string.IsNullOrWhiteSpace(libraryPath) && Directory.Exists(libraryPath))
             {
                 AppServices.Log.Info($"LoadSongs: scanning LibraryPath={libraryPath} (recursive)");
+                AppServices.Log.Info($"LoadSongs: Directory.Exists = {Directory.Exists(libraryPath)}");
+                AppServices.Log.Info($"LoadSongs: LibraryPath = {libraryPath}");
                 try
                 {
                     files.AddRange(Directory.GetFiles(libraryPath, "*.mid", SearchOption.AllDirectories));
                     files.AddRange(Directory.GetFiles(libraryPath, "*.midi", SearchOption.AllDirectories));
                     files.AddRange(Directory.GetFiles(libraryPath, "*.kar", SearchOption.AllDirectories));
+                    AppServices.Log.Info($"LoadSongs: Files trovati = {files.Count}");
+                    foreach (var f in files)
+                        AppServices.Log.Info($"LoadSongs: FILE -> {f}");
                 }
                 catch (Exception ex)
                 {

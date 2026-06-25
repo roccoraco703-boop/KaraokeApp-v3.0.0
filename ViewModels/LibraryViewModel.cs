@@ -91,14 +91,18 @@ namespace KaraokeApp.ViewModels
 // Permette di impostare i brani scansionati direttamente dalla MainViewModel
         public void SetSongs(IEnumerable<SongViewModel> songs)
         {
+            var songList = songs.ToList();
+            KaraokeApp.Services.AppServices.Log.Info($"LibraryViewModel.SetSongs: received {songList.Count} songs");
             _allSongs = new ObservableCollection<SongViewModel>(songs.OrderBy(s => s.Artist).ThenBy(s => s.Title));
             Songs = new ObservableCollection<SongViewModel>(_allSongs);
+            KaraokeApp.Services.AppServices.Log.Info($"LibraryViewModel.SetSongs: _allSongs.Count = {_allSongs.Count}, Songs.Count = {Songs.Count}");
             OnPropertyChanged(nameof(TotalSongs));
             OnPropertyChanged(nameof(FavoriteSongs));
             OnPropertyChanged(nameof(ReadySongs));
             OnPropertyChanged(nameof(MissingSongs));
             OnPropertyChanged(nameof(KarSongs));
             OnPropertyChanged(nameof(MidSongs));
+            KaraokeApp.Services.AppServices.Log.Info($"LibraryViewModel.SetSongs: TotalSongs = {TotalSongs}");
         }
 
         private static void UpdateSongFileStatus(SongViewModel song, string basePath)
