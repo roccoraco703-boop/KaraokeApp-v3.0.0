@@ -486,7 +486,7 @@
                                 </StackPanel>
 
                                 <Border Grid.Row="1" Grid.Column="0" Background="#020617" BorderBrush="#334155" CornerRadius="4" Padding="6">
-                                    <ListBox ItemsSource="{Binding Library.Songs}" SelectedItem="{Binding Library.SelectedSong}" Background="#020617" BorderBrush="#334155" Foreground="#E0F2FE"/>
+                                    <ListBox ItemsSource="{Binding Library.Songs}" SelectedItem="{Binding Library.SelectedSong}" DisplayMemberPath="Title" Background="#020617" BorderBrush="#334155" Foreground="#E0F2FE"/>
                                 </Border>
 
                                 <GridSplitter Grid.Row="1" Grid.Column="1" Width="6" HorizontalAlignment="Stretch" Background="#0F172A"/>
